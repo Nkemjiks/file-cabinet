@@ -1,0 +1,32 @@
+@import "bootstrap";
+//= require actiontext
+
+body {
+  height: 100%;
+}
+
+p.notice, p.alert {
+  margin: 0;
+  padding: 0;
+}
+
+div.welcome {
+  background-image: url('filecabinet.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 87vh;
+  position: relative;
+}
+
+div.welcome .after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000b0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

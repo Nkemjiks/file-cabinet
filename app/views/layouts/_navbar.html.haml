@@ -1,8 +1,8 @@
-%div
-  %h1 File Cabinet
-  %div
-    - if user_signed_in?
-      %p= link_to 'Logout', destroy_user_session_path, method: :delete
-    - else
-      %p= link_to 'Login', new_user_session_path
-      %p= link_to 'Signup', new_user_registration_path
+%div.d-flex.flex-column.flex-md-row.align-items-center.p-3.px-md-4.mb-3.bg-white.border-bottom.shadow-sm.mb-auto
+  %h5.my-0.mr-md-auto.font-weight-normal File Cabinet
+  - if user_signed_in?
+    = link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-danger'
+  - else
+    %nav.my-2.my-md-0.mr-md-3
+      = link_to 'Login', new_user_session_path, class: 'p-2 text-dark'
+    = link_to 'Signup', new_user_registration_path, class: 'btn btn-outline-primary'

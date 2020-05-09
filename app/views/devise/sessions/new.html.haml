@@ -1,0 +1,18 @@
+%h2.text-center.m-5 Log in
+%div.col-8.offset-2.col-sm-6.offset-sm-3
+  = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    %div.field.form-group
+      = f.label :email
+      = f.email_field :email, required: true, autofocus: true, input_html: { autocomplete: "email" }, class: "form-control"
+    %div.field.form-group
+      = f.label :password
+      = f.password_field :password, required: true, input_html: { autocomplete: "current-password" }, class: "form-control"
+    %div.field.form-group.form-check
+      - if devise_mapping.rememberable?
+        = f.check_box :remember_me, as: :boolean, class: "form-check-input"
+        = f.label :remember_me, class: "form-check-label"
+
+    %div.actions
+      = f.button :submit, "Log in", class: 'btn btn-primary'
+  %hr
+  = render "devise/shared/links"

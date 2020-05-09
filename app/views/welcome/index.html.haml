@@ -1,2 +1,6 @@
-%h1 Welcome#index
-%p Find me in app/views/welcome/index.html.erb
+%div.cover-container.p-4.p-md-5.text-white.bg-dark.text-center.w-100.mx-auto.welcome
+  %div.after
+    %h1.display-4 File Cabinet
+    %p.lead.my-3 Your life's work. Organized, always.
+    %p.lead.mb-0
+      = link_to 'Register', new_user_registration_path, class: 'btn btn-lg btn-primary'

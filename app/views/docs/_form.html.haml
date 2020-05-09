@@ -1,4 +1,11 @@
-= simple_form_for @doc do |f|
-  = f.input :title
-  = f.input :content
-  = f.button :submit
+%div.col-8.offset-2.col-sm-6.offset-sm-3
+  = simple_form_for @doc do |f|
+    %div.field.form-group
+      = f.label :title
+      = f.text_field :title, class: "form-control", id: "wysiwyg"
+
+    %div.field.form-group
+      = f.label :content
+      = f.rich_text_area :content, :class => "form-control", :col => '40', :row => '15'
+    %div.form-actions
+      = f.button :submit, class: 'btn btn-primary'

@@ -1,8 +1,13 @@
-%h1 All docs
-- @docs.each do |doc|
-  %h2= link_to doc.title, doc
-  %p= doc.content.truncate(100)
-  %p= time_ago_in_words(doc.created_at)
-
-%div
-  %p= link_to 'New Doc', new_doc_path
+%div.container
+  %h2.text-center.m-5 All Files
+  %div
+    %p.text-right= link_to 'New Doc', new_doc_path, class: "btn btn-outline-primary"
+  %div.row.row-cols-1.row-cols-md-3
+    - @docs.each do |doc|
+      %div.col.mb-4
+        %div.card
+          %div.card-body
+            %h5.card-title= link_to doc.title, doc
+            %p.card-text= doc.content.body.to_plain_text.truncate(100)
+          %div.card-footer
+            %small.text-muted= time_ago_in_words(doc.created_at)

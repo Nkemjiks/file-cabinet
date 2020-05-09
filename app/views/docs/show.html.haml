@@ -1,8 +1,8 @@
-%h2 Show doc
-%p= @doc.title
-%p= @doc.content
+%h2.text-center.m-5= @doc.title
 
-%div
-  %p= link_to 'All Docs', docs_path
-  %p= link_to 'Edit Doc', edit_doc_path(@doc)
-  %p= link_to 'Delete Doc', doc_path(@doc), method: :delete, data: { confirm: 'Are you sure?' }
+%div.container
+  %div.d-flex.justify-content-end.mb-2
+    = link_to 'All Files', docs_path, class: 'p-2 text-dark m-1'
+    = link_to 'Edit', edit_doc_path(@doc), class: 'btn btn-outline-primary m-1'
+    = link_to 'Delete', doc_path(@doc), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger m-1'
+  %p= @doc.content
