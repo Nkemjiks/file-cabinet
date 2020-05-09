@@ -1,5 +1,5 @@
 @import "bootstrap";
-//= require actiontext
+@import "./actiontext.scss";
 
 body {
   height: 100%;
@@ -29,4 +29,9 @@ div.welcome .after {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.trix-content {
+  max-height: 400px !important;
+  overflow-y: auto;
 }

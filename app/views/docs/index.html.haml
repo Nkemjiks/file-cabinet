@@ -5,7 +5,7 @@
   %div.row.row-cols-1.row-cols-md-3
     - @docs.each do |doc|
       %div.col.mb-4
-        %div.card
+        %div.card.h-100
           %div.card-body
             %h5.card-title= link_to doc.title, doc
             %p.card-text= doc.content.body.to_plain_text.truncate(100)
