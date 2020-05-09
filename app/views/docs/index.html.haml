@@ -1,7 +1,6 @@
 %div.container
   %h2.text-center.m-5 All Files
-  %div
-    %p.text-right= link_to 'New Doc', new_doc_path, class: "btn btn-outline-primary"
+  
   %div.row.row-cols-1.row-cols-md-3
     - @docs.each do |doc|
       %div.col.mb-4

@@ -1,6 +1,7 @@
 %div.d-flex.flex-column.flex-md-row.align-items-center.p-3.px-md-4.mb-3.bg-white.border-bottom.shadow-sm.mb-auto
   %h5.my-0.mr-md-auto.font-weight-normal File Cabinet
   - if user_signed_in?
+    = link_to 'New Doc', new_doc_path, class: "btn btn-outline-primary mr-2"
     = link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-danger'
   - else
     %nav.my-2.my-md-0.mr-md-3
